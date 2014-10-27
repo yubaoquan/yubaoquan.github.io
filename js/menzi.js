@@ -1,3 +1,6 @@
 var func1 = function() {
-	alert("...");
+	var sentence=document.getElementById("iSay").innerHTML;
+	alert(sentence);
+	var contentArea = document.getElementById("content");
+	contentArea.value += <p>sentence</p>;
 }
