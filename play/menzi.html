@@ -5,17 +5,47 @@
 	<script type="text/javascript" src="../js/menzi.js"></script>
 </head>
 
-<body>
-	<div class="demo">
-		你好,我是周闷子;
-	</div>
-	<div class="sentence">
-		<div id="content">
-			<p>content:</p>
+	<body>
+		<div id="page-container">
+			<div class="mainContent">
+				
+				<div class="demo">
+					你好,我是周闷子 ⊙ˍ⊙ 很高兴陪你聊天
+				</div>
+				<div class="padding">
+				<div class="sentence">
+					<div id="contentTitle">
+						<p>聊天内容:</p>
+					</div>
+					<div id="content">
+						
+					</div>
+					<p>对闷子说: <input type="text" id="iSay" /></p>
+					<input type="submit" value="Submit" onclick="func1()"/>
+
+				</div>
+			</div>
 		</div>
-		<p>对闷子说: <input type="text" id="iSay" /></p>
-		<input type="submit" value="Submit" onclick="func1()"/>
-		
-	</div>
-</body>
+			<div id="sidebar-a">
+				<div class="padding">
+					<h2 id="available">陪聊列表</h2>
+					<h3 id="available">可用陪聊</h2>
+					<div id="onlineUserDiv" class="online">
+						<p>周闷子</p>
+						<p>玉扃</p>
+						<p>乌鸦</p>
+					</div>
+					<h3 id="unavailable">开发中陪聊</h2>
+					<div class="offline">
+						<p>2TO</p>
+						<p>丁丁</p>
+						<p>贝勒</p>
+						<p>贱龙</p>
+						<p>磊子</p>
+						<p>凌风</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 <html>

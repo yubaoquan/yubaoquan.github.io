@@ -1,12 +1,51 @@
 .demo {
-
-	width: 300px;
 	border: 1px solid #ccc;
 	padding: 10px;
 	color :blue;	
 
 }
 
-.sentence {
+
+.mainContent {
+	/*float: left;*/
+	/*margin-right: 250px;*/
+	float :left;
+	line-height: 18px;
+	height: 280px;
+	width: 600px;
+}
+
+#sidebar-a {
+	float: right;
+	width: 180px;
+	line-height: 18px;
+	border-left:1px solid gray;
 	
+/* padding:1em; */
+}
+
+ .padding {
+	padding: 25px;
+	
+}
+
+#page-container {
+	width: 800px;
+	margin: auto;
+}
+
+#content {
+	border: 1px solid gray;
+	height: 300px;
+	overflow: auto;
+}
+
+.singleSentence {
+	background-color: #B4E1A2;
+	line-height: 18px;
+}
+
+.peiliaoSingleSentence {
+	line-height: 18px;
+	background-color: #72BBA3;
 }
