@@ -6,7 +6,13 @@
 }
 
 body {
-	background-color: #F7D9C1;
+	/*background-color: #F7D9C1;*/
+	background-image: url(../images/bg2.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	/*filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
+-moz-background-size:100% 100%;  
+    background-size:100% 100%; */
 }
 .mainContent {
 	/*float: left;*/
@@ -32,9 +38,13 @@ body {
 }
 
 #page-container {
+	overflow:hidden;
 	width: 900px;
 	margin: auto;
-	/*background-color: #F0D399;*/
+	background-color: #F0D399;
+	filter:alpha(Opacity=80);
+	-moz-opacity:0.8;
+	opacity: 0.8;
 }
 
 #content {
@@ -54,7 +64,7 @@ body {
 }
 
 #header {
-	background: #7AA27F;
+	/*background: #7AA27F;*/
 	height: 60px;
 	text-align:center;
 	font-weight:bold;
