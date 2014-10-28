@@ -5,18 +5,20 @@
 	<script type="text/javascript" src="../js/menzi.js"></script>
 </head>
 
-	<body onkeydown="BindEnter(event)">
-		<div id="page-container">
-			<div class="mainContent">
-				
-				<div class="hello" id="hello">
-					你好,我是周闷子 ⊙ˍ⊙ 很高兴陪你聊天
-				</div>
-				<div class="padding">
+<body onkeydown="BindEnter(event)">
+	<div id="page-container">
+		<div class="headerPadding">
+			<div id="header">
+				<h1>尿兜聊天模拟器</h1>
+			</div> 
+		</div>
+		<div class="mainContent">
+
+			<div class="hello" id="hello">
+				你好,我是周闷子 ⊙ˍ⊙ 很高兴陪你聊天
+			</div>
+			<div class="padding">
 				<div class="sentence">
-					<div id="contentTitle">
-						<p>聊天内容:</p>
-					</div>
 					<div id="content">
 						
 					</div>
@@ -26,26 +28,35 @@
 				</div>
 			</div>
 		</div>
-			<div id="sidebar-a">
-				<div class="padding">
-					<h2 id="available">陪聊列表</h2>
-					<h3 id="available">可用陪聊</h2>
+		<div id="sidebar-a">
+			<div class="padding">
+				<h2 id="available">陪聊列表</h2>
+				<h3 id="available">可用陪聊(请单击选择陪聊)</h2>
 					<div id="onlineUserDiv" class="online">
-						<p id="zhoumenzi" onclick="selectChater(this)" >周闷子</p>
-						<p id="yujiong" onclick="selectChater(this)" >玉扃</p>
-						<p onclick="selectChater(this)" >乌鸦</p>
+						<p id="zhoumenzi" onclick="selectChater(this)" >
+							<img src="../images/zhoumenzi.jpg"/>
+							周闷子
+						</p>
+						<p id="yujiong" onclick="selectChater(this)" >
+							<img src="../images/yujiong.jpg"/>
+							玉扃
+						</p>
+						<p id="wuya" onclick="selectChater(this)" >
+							<img src="../images/wuya.jpg"/>
+							乌鸦
+						</p>
 					</div>
 					<h3 id="unavailable">开发中陪聊</h2>
-					<div class="offline">
-						<p>2TO</p>
-						<p>丁丁</p>
-						<p>贝勒</p>
-						<p>贱龙</p>
-						<p>磊子</p>
-						<p>凌风</p>
+						<div class="offline">
+							<p>2TO</p>
+							<p>丁丁</p>
+							<p>贝勒</p>
+							<p>贱龙</p>
+							<p>磊子</p>
+							<p>凌风</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</body>
-<html>
+		</body>
+		<html>

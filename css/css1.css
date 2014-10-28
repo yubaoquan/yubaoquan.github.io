@@ -5,7 +5,9 @@
 
 }
 
-
+body {
+	background-color: #F7D9C1;
+}
 .mainContent {
 	/*float: left;*/
 	/*margin-right: 250px;*/
@@ -17,21 +19,22 @@
 
 #sidebar-a {
 	float: right;
-	width: 180px;
+	width: 200px;
 	line-height: 18px;
 	border-left:1px solid gray;
 	
-/* padding:1em; */
+	/* padding:1em; */
 }
 
- .padding {
+.padding {
 	padding: 25px;
-	
+	/*background-color: red;*/
 }
 
 #page-container {
-	width: 800px;
+	width: 900px;
 	margin: auto;
+	/*background-color: #F0D399;*/
 }
 
 #content {
@@ -48,4 +51,16 @@
 .peiliaoSingleSentence {
 	line-height: 18px;
 	background-color: #72BBA3;
+}
+
+#header {
+	background: #7AA27F;
+	height: 60px;
+	text-align:center;
+	font-weight:bold;
+	
+}
+.headerPadding{
+	margin:5px auto auto auto;
+	padding: 15px;
 }
