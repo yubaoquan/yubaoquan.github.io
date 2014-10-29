@@ -55,7 +55,8 @@ function BindEnter(obj){
 			button.click();
 		}
 	} else {
-		if(obj.keyCode == 13){
+		//alert(sendMethod);
+		if(!obj.ctrlKey&&obj.keyCode == 13){
 			button.click();
 		}
 	}
@@ -86,6 +87,7 @@ function selectChater(event) {
 function pageLoad() {
 	selectedChater = document.getElementById("zhoumenzi");
 	selectChater(selectedChater);
+	sendMethod = "ce";
 	//abc();
 }
 
