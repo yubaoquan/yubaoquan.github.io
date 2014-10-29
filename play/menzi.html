@@ -1,49 +1,49 @@
 <html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" href="../css/css1.css" />
-	
-	<script type="text/javascript" src="../js/ckeditor/ckeditor.js"></script>
-	<script type="text/javascript" src="../js/menzi.js"></script>
-</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="../css/css1.css" />
+		
+		<script type="text/javascript" src="../js/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="../js/menzi.js"></script>
+		<script type="text/javascript" src="../js/js2.js"></script>
+	</head>
 
-<body onkeydown="BindEnter(event)" onload="pageLoad()">
-	<div id="page-container">
-		<div class="headerPadding">
-			<div id="header">
-				<h1>尿兜聊天模拟器</h1>
-			</div> 
-		</div>
-		<div class="mainContent">
-
-			<div class="hello" >
-
-				<p id="hello">
-					<img id="a" src="../images/zhoumenzi.jpg"/>
-					你好,我是周闷子 ⊙ˍ⊙ 很高兴陪你聊天
-				</p>
+	<body onkeydown="BindEnter(event)" onload="pageLoad()">
+		<div id="page-container">
+			<div class="headerPadding">
+				<div id="header">
+					<h1>尿兜聊天模拟器</h1>
+				</div> 
 			</div>
-			<div class="padding">
-				<div class="sentence">
-					<div id="content">
+			<div class="mainContent">
+
+				<div class="hello" >
+
+					<p id="hello">
+						<img id="a" src="../images/zhoumenzi.jpg"/>
+						你好,我是周闷子 ⊙ˍ⊙ 很高兴陪你聊天
+					</p>
+				</div>
+				<div class="padding">
+					<div class="sentence">
+						<div id="content">
+							
+						</div>
+						<input type="hidden" id="sex"></input>
+						<p>对闷子说: 
+							
+						</p>
+						<textarea rows="6" cols="65" id="iSay" name="editor1"></textarea>
+					<!--	<script type="text/javascript">CKEDITOR.replace('editor1');</script>-->
+						<input id="ok" type="submit" value="Submit" onclick="func1()"/>
 						
 					</div>
-
-					<p>对闷子说: 
-						
-					</p>
-					<textarea rows="6" cols="65" id="iSay" name="editor1"></textarea>
-				<!--	<script type="text/javascript">CKEDITOR.replace('editor1');</script>-->
-					<input id="ok" type="submit" value="Submit" onclick="func1()"/>
-					
-				</div>
+				</div>							
 			</div>
-						
-		</div>
-		<div id="sidebar-a">
-			<div class="padding">
+			<div id="sidebar-a">
+				<div class="padding">
 				<h2 id="available">陪聊列表</h2>
-				<h3 id="available">可用陪聊(请单击选择陪聊)</h2>
+				<h3 id="available">可用陪聊(请单击选择陪聊)</h3>
 					<div id="onlineUserDiv" class="online">
 						<p id="zhoumenzi" onclick="selectChater(this)" >
 							<!-- <img src="../images/zhoumenzi.jpg"/> -->
@@ -58,17 +58,17 @@
 							乌鸦
 						</p>
 					</div>
-					<h3 id="unavailable">开发中陪聊</h2>
-						<div class="offline">
-							<p>2TO</p>
-							<p>丁丁</p>
-							<p>贝勒</p>
-							<p>贱龙</p>
-							<p>磊子</p>
-							<p>凌风</p>
-						</div>
+					<h3 id="unavailable">开发中陪聊</h3>
+					<div class="offline">
+						<p>2TO</p>
+						<p>丁丁</p>
+						<p>贝勒</p>
+						<p>贱龙</p>
+						<p>磊子</p>
+						<p>凌风</p>
 					</div>
 				</div>
 			</div>
-		</body>
-		<html>
+		</div>
+	</body>
+<html>

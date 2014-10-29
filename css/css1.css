@@ -1,6 +1,6 @@
 .hello {
 	border: 1px solid #ccc;
-	padding: 10px;
+	/*padding: 10px;*/
 	color :blue;	
 
 }
@@ -32,6 +32,7 @@ body {
 
 .padding {
 	padding: 25px;
+	/*border: 1px solid #ccc;*/
 	/*background-color: red;*/
 }
 
@@ -39,7 +40,7 @@ body {
 	overflow:hidden;
 	width: 900px;
 	margin: auto;
-	background-color: #BBDFFA;
+	background-color: #F2FFC1;
 	filter:alpha(Opacity=80);
 	-moz-opacity:0.8;
 	opacity: 0.8;
