@@ -39,10 +39,16 @@ var func1 = function() {
 		chaterName = chaterNames[selectedChater.id];
 		chaterID = selectedChater.id;
 	}
-	whatUSay = "<p class=\"singleSentence\"><b>你</b>对<b>" + chaterName + "</b>说:<br>" + whatUSay+"</p>";
+	//whatUSay = whatUSay.replace(new RegExp(">","g"), "&gt").replace(new RegExp("<","g"), "&lt");
+	whatUSay = whatUSay.replace(/[\r\n]/g,"<BR>").replace(/[\n]/g,"<BR>");
+	console.log(whatUSay);
+	whatUSay = "<p class=\"singleSentence\"><b>你</b>对<b>" + chaterName + "</b>说:<br></p>" + whatUSay;
+	// whatUSay = GetContents();
 	content.innerHTML += whatUSay;
 	var words = chaterWords[chaterID];
-	content.innerHTML += "<p class=\"peiliaoSingleSentence\"><b>" + chaterName + "</b>对<b>你</b>说:<br>" + words[0] + "</p>"
+	var wordIndex = rdm(words.length);
+	//console.log(wordIndex);
+	content.innerHTML += "<p class=\"peiliaoSingleSentence\"><b>" + chaterName + "</b>对<b>你</b>说:<br></p>" + words[wordIndex];
 	content.scrollTop = content.scrollHeight;
 	document.getElementById("iSay").value = "";
 }
@@ -51,20 +57,38 @@ function BindEnter(obj){
 	//alert("ok");
 	var button = document.getElementById('ok');
 	if(obj.keyCode == 13){
-		button.click();
+		//button.click();
 	}
 }
 
 function selectChater(event) {
-	//alert(event.innerHTML);
-	if (selectedChater != null) {
-		var bodyColor = document.bgColor;
-		selectedChater.style.backgroundColor=bodyColor;
-	}
-	
+	var bodyColor = document.bgColor;
+	selectedChater.style.backgroundColor=bodyColor;
+
 	var chaterID = event.id;
+	// var chaterImg = document.getElementById("a");
+	// var imgSrc = "../images/" + chaterID + ".jpg";
+	// chaterImg.src = imgSrc;
+	var imgStr = "<img id=\"a\" src=\"../images/"+ chaterID +".jpg\"/>";
+
 	var helloSentence = hello[chaterID];
-	document.getElementById("hello").innerHTML = helloSentence;
+	document.getElementById("hello").innerHTML = imgStr + helloSentence;
 	event.style.backgroundColor="#1ec5e5"
 	selectedChater = event;
+}
+
+function pageLoad() {
+	selectedChater = document.getElementById("zhoumenzi");
+	selectChater(selectedChater);
+}
+
+function rdm(n) {
+	return Math.floor(Math.random()*n);
+}
+
+function GetContents() {
+	// Get the editor instance that you want to interact with.
+	var editor = CKEDITOR.instances.editor1;
+	// Get editor contents
+	return editor.getData();
 }
