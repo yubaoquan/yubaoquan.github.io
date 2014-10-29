@@ -1,33 +1,3 @@
-var menziWords = new Array();
-menziWords[0] = "什么心态";
-menziWords[1] = "...";
-menziWords[2] = "你一脸!";
-
-var yujiongWords = new Array();
-yujiongWords[0] = "摸摸头";
-yujiongWords[1] = "老娘抽死你丫的!";
-yujiongWords[2] = "→_→";
-
-var wuyaWords = new Array();
-wuyaWords[0] = "卧槽!";
-wuyaWords[1] = "我勒个去!";
-
-var chaterWords = new Object();
-chaterWords["zhoumenzi"] = menziWords;
-chaterWords["yujiong"] = yujiongWords;
-chaterWords["wuya"] = wuyaWords;
-
-var chaterNames = new Object();
-chaterNames["zhoumenzi"] = "周闷子";
-chaterNames["yujiong"] = "玉扃";
-chaterNames["wuya"] = "乌小六";
-
-var hello = new Object();
-hello["zhoumenzi"] = "你好,我是周闷子 ⊙ˍ⊙ 很高兴陪你聊天";
-hello["yujiong"] = "我就是热情如火的玉扃!(╯‵□′)╯︵┻━┻";
-hello["wuya"] = "卧槽!卧槽!hhhhuuuooo!"
-var selectedChater;
-
 var func1 = function() {
 	var whatUSay=document.getElementById("iSay").value;
 	var content = document.getElementById("content");
@@ -52,7 +22,7 @@ var func1 = function() {
 	var wordIndex = rdm(words.length);
 	if (chaterID == "yujiong") {
 		var sex = document.getElementById("sex").value;
-		alert(sex);
+		//alert(sex);
 		var middle = parseInt(words.length / 2);
 		wordIndex = rdm(middle);
 		if (sex == "male") {
@@ -80,9 +50,16 @@ var func1 = function() {
 function BindEnter(obj){
 	//alert("ok");
 	var button = document.getElementById('ok');
-	if(obj.ctrlKey&&obj.keyCode == 13){
-		button.click();
+	if (sendMethod == "ce") {
+		if(obj.ctrlKey&&obj.keyCode == 13){
+			button.click();
+		}
+	} else {
+		if(obj.keyCode == 13){
+			button.click();
+		}
 	}
+	
 }
 
 function selectChater(event) {
@@ -128,4 +105,9 @@ function getSex() {
 	if (sex == "男") {
 		return "male";
 	}
+}
+
+function changeSendMethod(obj) {
+	sendMethod = obj.value;
+	
 }

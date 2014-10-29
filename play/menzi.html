@@ -6,6 +6,8 @@
 		<script type="text/javascript" src="../js/ckeditor/ckeditor.js"></script>
 		<script type="text/javascript" src="../js/menzi.js"></script>
 		<script type="text/javascript" src="../js/js2.js"></script>
+		<script type="text/javascript" src="../js/constant.js"></script>
+
 	</head>
 
 	<body onkeydown="BindEnter(event)" onload="pageLoad()">
@@ -35,7 +37,10 @@
 						</p>
 						<textarea rows="6" cols="65" id="iSay" name="editor1"></textarea>
 					<!--	<script type="text/javascript">CKEDITOR.replace('editor1');</script>-->
-						<input id="ok" type="submit" value="Submit" onclick="func1()"/>
+						<input id="ok" type="submit" value="说好了" onclick="func1()"></input>
+
+						<p><input type="radio" name="sendMethod" value="en" onclick="changeSendMethod(this)"/>Enter发送</p>
+						<p><input type="radio" name="sendMethod" value="ce" onclick="changeSendMethod(this)" checked="checked"/>Ctrl+Enter发送</p>
 						
 					</div>
 				</div>							
