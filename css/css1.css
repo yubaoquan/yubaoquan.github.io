@@ -1,19 +1,15 @@
 .hello {
 	border: 1px solid #ccc;
-	/*padding: 10px;*/
 	color :blue;	
 
 }
 
 body {
-	/*background-color: #F7D9C1;*/
 	background-image: url(../images/bg2.jpg);
 	background-position: center;
 	background-attachment: fixed;
-	/*filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";  
--moz-background-size:100% 100%;  
-    background-size:100% 100%; */
 }
+
 .mainContent {
 	float :left;
 	line-height: 18px;
@@ -26,8 +22,6 @@ body {
 	width: 200px;
 	line-height: 18px;
 	border-left:1px solid gray;
-	
-	/* padding:1em; */
 }
 
 .padding {
@@ -52,14 +46,23 @@ body {
 	overflow: auto;
 }
 
+.whatUSay {
+	padding-left: 20px;
+	/*padding-top: 5px;*/
+}
+
+.peiliaoWord {
+	text-indent: 20px;
+}
+
 .singleSentence {
-	background-color: #B4E1A2;
-	line-height: 18px;
+	/*background-color: #B4E1A2;*/
+	line-height: 5px;
 }
 
 .peiliaoSingleSentence {
-	line-height: 18px;
-	background-color: #72BBA3;
+	line-height: 5px;
+	/*background-color: #72BBA3;*/
 }
 
 #header {
@@ -69,6 +72,7 @@ body {
 	font-weight:bold;
 	
 }
+
 .headerPadding{
 	margin:5px auto auto auto;
 	padding: 15px;
