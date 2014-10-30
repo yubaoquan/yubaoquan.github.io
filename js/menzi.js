@@ -42,30 +42,30 @@ function BindEnter(obj){
 }
 
 //选择陪聊;
-function selectChater(element) {
+function selectPeiliao(element) {
 	var bodyColor = document.bgColor;
 	currentPeiliaoElement.style.backgroundColor=bodyColor;
 
 	currentPeiliaoID = element.id;
 	currentPeiliao = peiliaoList[element.id];
-	if (currentPeiliaoID == "yujiong") {
-		var sex = getSex();
-		alert(sex);
-		document.getElementById("sex").value = sex;
+	if (currentPeiliaoID == "yujiong" && typeof(userGender) == "undefined") {
+		window.open ("selectGender.html", "newwindow", "height=200, width=250, toolbar =no, menubar=no, scrollbars=no, resizable=no, location=no, status=no");
 	}
 	
 	var imgFilePath = "../images/" + currentPeiliaoID + ".jpg";
 	var imgElem = "<img id=\"a\" src=\" "+ imgFilePath+"\"/>";
 
 	document.getElementById("hello").innerHTML = imgElem + currentPeiliao.hello;
-	element.style.backgroundColor="#1ec5e5"
+	element.style.backgroundColor="#1ec5e5";
+	var myHeadSrc = "<img id=\"myHead\" src=\"../images/" + "user" + ".jpg\"/>";
+	document.getElementById("say2who").innerHTML = myHeadSrc + "对" + currentPeiliao.name + "说:";
 	currentPeiliaoElement = element;
 }
 
 //界面打开时的初始化工作;
 function pageLoad() {
 	currentPeiliaoElement = document.getElementById("zhoumenzi");
-	selectChater(currentPeiliaoElement);
+	selectPeiliao(currentPeiliaoElement);
 	sendMethod = "ce";
 	//abc();
 }
@@ -131,4 +131,20 @@ function changeSendMethod(obj) {
 	}
 	sendMethod = obj.value;
 	
+}
+
+//给子窗口调用的方法,在方法体里调用父窗口的方法;
+function selectGender(obj) {
+	userGender = obj.value;
+	opener.setGender(obj.value);
+	window.close();
+	//alert("非常抱歉,我自己关不上,请把我关了,谢谢!");
+}
+
+function setGender(value) {
+	userGender = value;
+}
+
+function sorryInfo() {
+	alert("十分Sorry,这个陪聊正在被调教,无法陪你聊天;");
 }

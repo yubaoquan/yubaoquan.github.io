@@ -48,7 +48,17 @@ yujiong.words = yujiongWords;
 
 //玉扃的说话方式;
 function yujiongSay(whatUSay) {
-	return "developing";
+	//alert(userGender);
+	if (userGender == "male") {
+		return yujiongWords[1];
+	}
+	if (userGender == "female") {
+		return yujiongWords[0];
+	}
+	if (userGender == "wtf") {
+		return yujiongWords[2];
+	}
+	return "error";
 }
 yujiong.say = yujiongSay;
 
@@ -102,8 +112,13 @@ var currentPeiliaoID;
 var currentPeiliao;
 //陪聊的语句数组,后续改为陪聊的说话方法;
 var words;
+//用户性别
+var userGender;
+// //性别选择页;
+// var genderSelectPage;
 
 function getASentence (words) {
 	var index = rdm(words.length);
 	return words[index];
 }
+

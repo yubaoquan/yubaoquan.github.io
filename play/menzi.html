@@ -31,9 +31,9 @@
 						<div id="content">
 							
 						</div>
-						<input type="hidden" id="sex"></input>
-						<p>对闷子说: 
-							
+						<!-- <input type="hidden" id="sex"></input> -->
+						<p id="say2who">
+							对闷子说: 
 						</p>
 						<div>
 							<textarea rows="6" cols="65" id="iSay" name="editor1"></textarea>
@@ -52,27 +52,28 @@
 				<h2 id="available">陪聊列表</h2>
 				<h3 id="available">可用陪聊(请单击选择陪聊)</h3>
 					<div id="onlineUserDiv" class="online">
-						<p id="zhoumenzi" onclick="selectChater(this)" >
+						<p id="zhoumenzi" onclick="selectPeiliao(this)" >
 							<!-- <img src="../images/zhoumenzi.jpg"/> -->
 							周闷子
 						</p>
-						<p id="yujiong" onclick="selectChater(this)" >
+						<p id="yujiong" onclick="selectPeiliao(this)" >
 							<!-- <img src="../images/yujiong.jpg"/> -->
 							玉扃
 						</p>
-						<p id="wuya" onclick="selectChater(this)" >
+						<p id="wuya" onclick="selectPeiliao(this)" >
 							<!-- <img src="../images/wuya.jpg"/> -->
 							乌鸦
 						</p>
 					</div>
 					<h3 id="unavailable">开发中陪聊</h3>
-					<div class="offline">
+					<div class="offline" onclick="sorryInfo()">
 						<p>2TO</p>
 						<p>丁丁</p>
 						<p>贝勒</p>
 						<p>贱龙</p>
 						<p>磊子</p>
 						<p>凌风</p>
+						<p>安紫...</p>
 					</div>
 				</div>
 			</div>
