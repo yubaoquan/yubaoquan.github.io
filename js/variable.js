@@ -1,5 +1,5 @@
 //==============================创建闷子角色==================================
-var zhoumenzi = new Object();
+var zhoumenzi = {};
 
 //闷子的名字;
 zhoumenzi.name = "周闷子";
@@ -8,7 +8,7 @@ zhoumenzi.name = "周闷子";
 zhoumenzi.hello = "你好,我是周闷子 ⊙ˍ⊙ 很高兴陪你聊天";
 
 //闷子的台词;
-var menziWords = new Array();
+var menziWords = [];
 menziWords[0] = "什么心态";
 menziWords[1] = "...";
 menziWords[2] = "你一脸!";
@@ -31,7 +31,7 @@ function menziSay(whatUSay) {
 zhoumenzi.say = menziSay;
 
 //=========================创建玉扃角色=======================================
-var yujiong = new Object();
+var yujiong = {};
 
 //玉扃的名字;
 yujiong.name = "玉扃";
@@ -40,7 +40,7 @@ yujiong.name = "玉扃";
 yujiong.hello = "我就是热情如火的玉扃!(╯‵□′)╯︵┻━┻";
 
 //玉扃的台词;
-var yujiongWords = new Array();
+var yujiongWords = [];
 yujiongWords[0] = "摸摸头";
 yujiongWords[1] = "老娘抽死你丫的!";
 yujiongWords[2] = "→_→";
@@ -53,7 +53,7 @@ function yujiongSay(whatUSay) {
 yujiong.say = yujiongSay;
 
 //=========================创建乌鸦角色=======================================
-var wuya = new Object();
+var wuya = {};
 
 //乌鸦的名字:
 wuya.name = "乌小六";
@@ -61,7 +61,7 @@ wuya.name = "乌小六";
 //乌鸦的欢迎语;
 wuya.hello = "卧槽!卧槽!hhhhuuuooo!";
 //乌鸦的台词;
-var wuyaWords = new Array();
+var wuyaWords = [];
 wuyaWords[0] = "卧槽!";
 wuyaWords[1] = "我勒个去!";
 wuya.words = wuyaWords;
@@ -73,7 +73,7 @@ function wuyaSay(whatUSay) {
 wuya.say = wuyaSay;
 
 //=========================将以上角色添加到到陪聊列表中========================
-var peiliaoList = new Object();
+var peiliaoList = {};
 peiliaoList.zhoumenzi = zhoumenzi;
 peiliaoList.yujiong = yujiong;
 peiliaoList.wuya = wuya;
