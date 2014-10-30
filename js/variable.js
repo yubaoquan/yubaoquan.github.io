@@ -60,15 +60,28 @@ wuya.name = "乌小六";
 
 //乌鸦的欢迎语;
 wuya.hello = "卧槽!卧槽!hhhhuuuooo!";
+
 //乌鸦的台词;
 var wuyaWords = [];
 wuyaWords[0] = "卧槽!";
 wuyaWords[1] = "我勒个去!";
 wuya.words = wuyaWords;
 
+//乌鸦早安语;
+var wuyaMorning = [];
+wuyaMorning[0] = "好个屁";
+wuyaMorning[1] = "好个蛋";
+wuyaMorning[2] = "好个屌";
+wuyaMorning[3] = "好你妹";
+wuya.morningWords = wuyaMorning;
+
 //乌鸦的说话方式;
 function wuyaSay(whatUSay) {
-	return "developing";
+	if (whatUSay.indexOf("早上好") != -1)  {
+		return getASentence(wuyaMorning);
+	} else {
+		return getASentence(wuyaWords);
+	}
 }
 wuya.say = wuyaSay;
 
@@ -90,4 +103,7 @@ var currentPeiliao;
 //陪聊的语句数组,后续改为陪聊的说话方法;
 var words;
 
-
+function getASentence (words) {
+	var index = rdm(words.length);
+	return words[index];
+}
