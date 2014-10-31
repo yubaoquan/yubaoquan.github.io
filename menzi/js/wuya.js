@@ -11,6 +11,11 @@ wuya.hello = "卧槽!卧槽!hhhhuuuooo!";
 var wuyaWords = [];
 wuyaWords[0] = "卧槽!";
 wuyaWords[1] = "我勒个去!";
+wuyaWords[2] = "想吃烤肉!";
+wuyaWords[3] = "咱喝酒去吧!";
+wuyaWords[4] = "咱们结婚吧";
+wuyaWords[5] = "我不喜欢男人";
+wuyaWords[6] = "没人这么给面子还调戏我老人家了";
 wuya.words = wuyaWords;
 
 //乌鸦早安语;
