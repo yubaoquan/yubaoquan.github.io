@@ -3,10 +3,18 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="../css/css1.css" />
 		
-		<script type="text/javascript" src="../js/ckeditor/ckeditor.js"></script>
+		<script type="text/javascript" src="../../common_js/ckeditor/ckeditor.js"></script>
 		<script type="text/javascript" src="../js/menzi.js"></script>
 		<script type="text/javascript" src="../js/js2.js"></script>
+
+		<script type="text/javascript" src="../js/zhoumenzi.js"></script>
+		<script type="text/javascript" src="../js/yujiong.js"></script>
+		<script type="text/javascript" src="../js/joke.js"></script>
+		<script type="text/javascript" src="../js/wuya.js"></script>
+		<script type="text/javascript" src="../js/toto.js"></script>
+		
 		<script type="text/javascript" src="../js/variable.js"></script>
+
 
 	</head>
 
@@ -22,7 +30,7 @@
 				<div class="hello" >
 
 					<p id="hello">
-						<img id="a" src="../images/zhoumenzi.jpg"/>
+						<img id="a" src="../images/zhoumenzi.jpg" />
 						你好,我是周闷子 ⊙ˍ⊙ 很高兴陪你聊天
 					</p>
 				</div>
@@ -53,21 +61,20 @@
 				<h3 id="available">可用陪聊(请单击选择陪聊)</h3>
 					<div id="onlineUserDiv" class="online">
 						<p id="zhoumenzi" onclick="selectPeiliao(this)" >
-							<!-- <img src="../images/zhoumenzi.jpg"/> -->
 							周闷子
 						</p>
 						<p id="yujiong" onclick="selectPeiliao(this)" >
-							<!-- <img src="../images/yujiong.jpg"/> -->
 							玉扃
 						</p>
 						<p id="wuya" onclick="selectPeiliao(this)" >
-							<!-- <img src="../images/wuya.jpg"/> -->
 							乌鸦
+						</p>
+						<p id="toto" onclick="selectPeiliao(this)" >
+							2TO
 						</p>
 					</div>
 					<h3 id="unavailable">开发中陪聊</h3>
 					<div class="offline" onclick="sorryInfo()">
-						<p>2TO</p>
 						<p>丁丁</p>
 						<p>贝勒</p>
 						<p>贱龙</p>
@@ -75,6 +82,9 @@
 						<p>凌风</p>
 						<p>安紫...</p>
 					</div>
+				</div>
+				<div class="gif">
+					<img id="bili" src="../images/bili.gif"/>
 				</div>
 			</div>
 		</div>

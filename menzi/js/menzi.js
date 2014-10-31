@@ -31,7 +31,9 @@ function BindEnter(obj){
 		if(obj.keyCode == 13){
 			if (!obj.ctrlKey) {
 				button.click();
+				obj.preventDefault();//阻止回车事件冒泡,修正回车残留问题;
 			} else {
+				// alert("Enter");
 				document.getElementById("iSay").value += "\n";
 			}
 		}
