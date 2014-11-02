@@ -35,6 +35,7 @@ body {
 	width: 900px;
 	margin: auto;
 	background-color: #F2FFC1;
+	/*半透明*/
 	filter:alpha(Opacity=80);
 	-moz-opacity:0.8;
 	opacity: 0.8;
@@ -80,4 +81,14 @@ body {
 
 #iSay {
 	resize: none;
+}
+
+.tooltip {
+	filter:alpha(Opacity=80);
+	-moz-opacity:0.8;
+	opacity: 0.8;
+	width: 100px;
+	height: 30px;
+	 background: black;
+	
 }

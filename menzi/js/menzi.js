@@ -69,6 +69,18 @@ function pageLoad() {
 	currentPeiliaoElement = document.getElementById("zhoumenzi");
 	selectPeiliao(currentPeiliaoElement);
 	sendMethod = "ce";
+	var zhoumenziDesc = "<div class = tooltip>无聊的闷子</div>";
+	$( "#zhoumenzi" ).tooltip( {
+		content: zhoumenziDesc  ,
+		show: {
+			effect: "slideDown",
+			delay: 250
+		},
+		hide: {
+			effect: "explode",
+			delay: 250
+		}
+	} );
 	//abc();
 }
 
