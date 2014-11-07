@@ -5,7 +5,7 @@ var toto = {};
 toto.name = "2TO";
 
 //2TO的名片;
-toto.desc = '呵呵党,生性凉薄,行尸走肉';
+toto.desc = '呵呵党,生性凉薄';
 
 //2TO的欢迎语;
 toto.hello = "→_→你们真的是够了好么";

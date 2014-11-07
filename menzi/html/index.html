@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Simple Drop Down Menu</title>
+<script type="text/javascript" src="../../common_js/jquery-2.1.1.js"></script>
+<link rel="stylesheet" href="../css/peiliaoList.css" />
+<link rel="stylesheet" href="../../common_js/jquery-ui-themes-1.11.2/themes/smoothness/jquery-ui.css">
+<script src="../../common_js/jquery-ui-1.11.2.custom/jquery-ui.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function () {	
+	$( document ).tooltip({
+			show: {
+				effect: "slideDown",
+				delay: 2
+			},
+			hide: {
+				effect: "explode",
+				delay: 1
+			}
+		});
+
+	$('#nav li').hover(
+		function () {
+			//show its submenu
+			$('ul', this).stop().slideDown(200);
+
+		}, 
+		function () {
+			//hide its submenu
+			$('ul', this).stop().slideUp(200);			
+		}
+	);
+	
+});
+
+</script>
+
+</head>
+<body>
+
+<ul id="nav">
+	<li><a href="#">Parent 01</a>
+		<ul>
+			<li><a href="#" title="陪聊名片加载失败" >Item 01</a></li>
+			<li><a href="#" class="selected">Item 02</a></li>
+			<li><a href="#">Item 03</a></li>
+		</ul>
+	</li>
+	<li><a href="#" class="selected">Parent 02 </a>
+		<ul>
+			<li><a href="#" title="陪聊名片加载失败" >Item 01</a></li>
+			<li><a href="#" class="selected">Item 02</a></li>
+			<li><a href="#">Item 03</a></li>
+		</ul>
+		<div class="clear"></div>
+	</li>
+	<li><a href="#">Parent 03 </a>
+	<ul>
+		<li><a href="#" title="陪聊名片加载失败" >Item 04</a></li>
+		<li><a href="#">Item 05</a></li>
+		<li><a href="#">Item 06</a></li>
+		<li><a href="#" title="陪聊名片加载失败">Item 07</a></li>
+	</ul>			
+		<!-- <div class="clear"></div> -->
+	</li>
+	<li><a href="#">Parent 04</a>
+		<ul>
+			<li><a href="#" title="陪聊名片加载失败" >Item 01</a></li>
+			<li><a href="#" class="selected">Item 02</a></li>
+			<li><a href="#">Item 03</a></li>
+		</ul>
+	</li>
+</ul>
+
+</body>
+</html>
