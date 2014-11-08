@@ -49,9 +49,11 @@ yujiong.say = function(whatUSay) {
 	}
 	if (userGender == "female") {
 		return getASentence(words2Female);
-	}
-	if (userGender == "wtf") {
+	} else {
 		return getASentence(words2WTF);
 	}
-	return "error";
+	// if (userGender == "wtf") {
+	// 	return getASentence(words2WTF);
+	// }
+	// return "error";
 };

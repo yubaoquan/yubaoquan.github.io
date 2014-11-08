@@ -92,10 +92,10 @@ function initTooltip() {
                 effect: "slideDown",
                 duration: 180,
             },
-            hide: {
-                effect: "explode",
-                duration: 180,
-            }
+            // hide: {
+            //     effect: "explode",
+            //     duration: 180,
+            // }
 		});
 	}
 }

@@ -5,12 +5,14 @@
     <title>jQuery Multicolor animation drop down navigation menu demo</title>
     <link rel="shortcut icon" type="image/x-icon" href="http://www.htmldrive.net/images/favicon.ico">
     <script type="text/javascript" src="../../common_js/jquery-2.1.1.js"></script>
-    <link rel="stylesheet" href="../css/18.css" />
+    
     <link rel="stylesheet" href="../../common_js/jquery-ui-themes-1.11.2/themes/smoothness/jquery-ui.css">
     <script src="../../common_js/jquery-ui-1.11.2.custom/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/18.css" />
     <script type="text/javascript" src="18.js"></script>
     <script type="text/javascript">
     $(document).ready(function () { 
+        alert('xxx');
         $( '#xxx' ).tooltip({
             content: '<div class = tooltip>' + '哈哈哈' + '</div>',
             // track: true,
@@ -32,28 +34,30 @@
 </script>
 </head>
 <body>
-    
+
     <h2>Demo1</h2>
     <div id="webwidget_menu_dropdown" class="webwidget_menu_dropdown">
         <ul style="font-size: 14px;">
-            <li class="current">第一个菜单
+            <li class="current">
+                可用陪聊
                 <ul class='ul1'>
-                    <li id='xxx' title="陪聊名片加载失败">submenu1</li>
-                    <li>submenu2</li>
-                    <li>submenu3</li>
-                    <li>submenu4</li>
-                    <li>submenu5</li>
-                    <li>submenu6</li>
+                    <li id="xxx" onclick="selectPeiliao(this)" title="陪聊名片加载失败">周闷子</li>
+                    <li id="yujiong" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>玉扃</li>
+                    <li id="wuya" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>乌鸦</li>
+                    <li id="toto" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>2TO</li>
+                    <li id="xiaolong" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>小龙</li>
                 </ul>
             </li>
-            <li class='li2'>第2个菜单
+            <li class='li2'>
+                开发中陪聊
                 <ul class='ul1'>
-                    <li>submenu1</li>
-                    <li>submenu2</li>
-                    <li>submenu3</li>
-                    <li>submenu4</li>
-                    <li>submenu5</li>
-                    <li>submenu6</li>
+                    <li>阿名</li>
+                    <li>丁丁</li>
+                    <li>贝勒</li>
+                    <li>磊子</li>
+                    <li>凌风</li>
+                    <li>白菜</li>
+                    <li>安紫...</li>
                 </ul>
             </li>
         </ul>
