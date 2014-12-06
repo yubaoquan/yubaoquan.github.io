@@ -32,6 +32,7 @@
         parentItems.children("ul").children("li").hover(
             function(){
                 $(this).css("background-color",'#1C232E');
+                console.log('hover');
             },
             function(){
                 $(this).css("background-color",'#d9d0b2');//'#63B4C9'
