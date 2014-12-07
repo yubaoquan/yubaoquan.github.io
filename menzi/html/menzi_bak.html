@@ -1,36 +1,34 @@
-<html ng-app="menziApp" ng-controller="menziController">
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<link rel="stylesheet" href="../css/css1.css" />
 	<link rel="stylesheet" href="../../common_js/jquery-ui-themes-1.11.2/themes/smoothness/jquery-ui.css">
 
-	<script src="../../common_js/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="../../common_js/ckeditor/ckeditor.js"></script>
 
-	<!-- 
-	<script src="../../common_js/jquery-2.1.1.js"></script>
-	<script src="../../common_js/jquery-ui-1.11.2.custom/jquery-ui.js"></script>
-	 -->
+	<!-- <script type="text/javascript" src="../../common_js/jquery-2.1.1.js"></script> -->
+	<!-- <script src="../../common_js/jquery-ui-1.11.2.custom/jquery-ui.js"></script> -->
+
 	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 	<script src="http://libs.useso.com/js/jqueryui/1.10.4/jquery-ui.js"></script>
-	<script src="http://lib.sinaapp.com/js/angular.js/angular-1.2.19/angular.js"></script>
-	<script src="../js/controller.js"></script>
 
-	<script src="../js/menzi.js"></script>
-	<script src="../js/js2.js"></script>
+	<script type="text/javascript" src="../js/menzi.js"></script>
+	<script type="text/javascript" src="../js/js2.js"></script>
 
-	<script src="../js/zhoumenzi.js"></script>
-	<script src="../js/yujiong.js"></script>
-	<script src="../js/joke.js"></script>
-	<script src="../js/wuya.js"></script>
-	<script src="../js/toto.js"></script>
-	<script src="../js/xiaolong.js"></script>
-	<script src="../js/variable.js"></script>
-
+	<script type="text/javascript" src="../js/zhoumenzi.js"></script>
+	<script type="text/javascript" src="../js/yujiong.js"></script>
+	<script type="text/javascript" src="../js/joke.js"></script>
+	<script type="text/javascript" src="../js/wuya.js"></script>
+	<script type="text/javascript" src="../js/toto.js"></script>
+	<script type="text/javascript" src="../js/xiaolong.js"></script>
+	<script type="text/javascript" src="../js/aming.js"></script>
+	<script type="text/javascript" src="../js/variable.js"></script>
 	<link rel="stylesheet" href="../css/18.css" />
-	<script src="18.js"></script>
+	<script type="text/javascript" src="18.js"></script>
+
 </head>
 
-<body onkeydown="BindEnter(event)" onload="pageLoad()" >
+<body onkeydown="BindEnter(event)" onload="pageLoad()">
 	<div id="page-container">
 		<div class="headerPadding">
 			<div id="header">
@@ -50,35 +48,31 @@
 			<div class="padding">
 				<div class="sentence">
 					<div id="content"></div>
-					<!-- <input type="hidden" id="sex"></input>
-				-->
-				<p id="say2who">对闷子说:</p>
-				<div>
-					<textarea rows="6" cols="65" id="iSay" name="editor1"></textarea>
-				</div>
-				<input id="ok" type="submit" value="说好了" onclick="talk()"></input>
-			<!-- <form>
-			-->
-			<p>
-				<input type="radio" name="sendMethod" value="en" onclick="changeSendMethod(this)"/>
-				Enter发送
-			</p>
-			<p>
-				<input type="radio" name="sendMethod" value="ce" onclick="changeSendMethod(this)" checked="checked"/>
-				Ctrl+Enter发送
-			</p>
-			<p>
-				<input type="radio" name="sendMethod" value="ck" onclick="changeSendMethod(this)" />
-				使用CKEditor
-			</p>
-			<!-- </form>--></div>
+					<p id="say2who">对闷子说:</p>
+					<div>
+						<textarea rows="6" cols="65" id="iSay" name="editor1"></textarea>
+					</div>
+					<input id="ok" type="submit" value="说好了" onclick="talk()"></input>
+				<p>
+					<input type="radio" name="sendMethod" value="en" onclick="changeSendMethod(this)"/>
+					Enter发送
+				</p>
+				<p>
+					<input type="radio" name="sendMethod" value="ce" onclick="changeSendMethod(this)" checked="checked"/>
+					Ctrl+Enter发送
+				</p>
+				<p>
+					<input type="radio" name="sendMethod" value="ck" onclick="changeSendMethod(this)" />
+					使用CKEditor
+				</p>
+			</div>
+		</div>
 	</div>
-</div>
-<div id="sidebar-a">
-	<div class="padding">
-		<h2 id="peiliaoList">陪聊列表</h2>
+	<div id="sidebar-a">
+		<div class="padding">
+			<h2 id="peiliaoList">陪聊列表</h2>
 
-		<!-- <h3 id="available">可用陪聊(请单击选择陪聊)</h3>
+			<!-- <h3 id="available">可用陪聊(请单击选择陪聊)</h3>
 		<div id="availablePeiliaos" class="online">
 			<p id="zhoumenzi" onclick="selectPeiliao(this)" title="陪聊名片加载失败">周闷子</p>
 			<p id="yujiong" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>玉扃</p>
@@ -86,12 +80,18 @@
 			<p id="toto" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>2TO</p>
 			<p id="xiaolong" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>小龙</p>
 		</div>
-		<h3 id="unavailable">开发中陪聊</h3>
-		<div class="offline" onclick="sorryInfo()" ng-repeat="uPeiliao in uPeiliaos">
-			<p>{{uPeiliao.name}}</p>
-			
-		</div> -->
 
+		<h3 id="unavailable">开发中陪聊</h3>
+		<div class="offline" onclick="sorryInfo()">
+			<p>阿名</p>
+			<p>丁丁</p>
+			<p>贝勒</p>
+			<p>磊子</p>
+			<p>凌风</p>
+			<p>白菜</p>
+			<p>安紫...</p>
+		</div>
+		-->
 		<div id="webwidget_menu_dropdown" class="webwidget_menu_dropdown">
 			<ul style="font-size: 14px;">陪聊列表
 				<li class="current">
@@ -102,29 +102,26 @@
 						<li id="wuya" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>乌鸦</li>
 						<li id="toto" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>2TO</li>
 						<li id="xiaolong" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>小龙</li>
-						<!-- <li id="aming" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>阿名</li> -->
+						<li id="aming" onclick="selectPeiliao(this)" title='陪聊名片加载失败'>阿名</li>
 					</ul>
 				</li>
 				<li class='li2'>
 					开发中陪聊
-					<ul class='ul1' onclick="sorryInfo()" >
-						<!-- <li>丁丁</li>
+					<ul class='ul1' onclick="sorryInfo()">
+						<li>丁丁</li>
 						<li>贝勒</li>
 						<li>磊子</li>
 						<li>凌风</li>
 						<li>白菜</li>
-						<li>安紫...</li>  -->
-						<li class="red" ng-repeat="uPeiliao in uPeiliaos" >{{uPeiliao.name}}</li>
+						<li>安紫...</li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 
-
-
 	</div>
 	<div class="gif">
-		<img class="gay" ng-src="{{gay.imageUrl}}"/>
+		<img id="bili" src="../images/bili.gif"/>
 	</div>
 </div>
 </div>
