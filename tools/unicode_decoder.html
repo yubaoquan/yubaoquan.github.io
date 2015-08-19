@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>unicode 解码器</title>
+</head>
+
+<body>
+    <textarea id="unicode" placeholder="在此输入Unicode文本"></textarea>
+    <button id="btn">解码</button>
+    <div id="result">
+
+    </div>
+    <script>
+        var textarea = document.getElementById('unicode');
+        textarea.value = '';
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click', function() {
+            console.info('click');
+            var str = document.getElementById('unicode').value;
+            console.info(str);
+            document.getElementById('result').innerHTML = decode(str);
+        });
+
+        function decode(str) {
+            // return eval("'" + str + "'");
+            return unescape(str.replace(/\\u/g, "%u"));
+        }
+    </script>
+</body>
+</html>
