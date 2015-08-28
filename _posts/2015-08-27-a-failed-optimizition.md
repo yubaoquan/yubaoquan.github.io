@@ -27,18 +27,25 @@ title: 一次不成功的性能优化
 比如,
 
 > 主页面是 project/Tpl/main.html
+
 > 要引入的页面是 project/Tpl/partial.html
+
 > ng-include所在块的控制器是 project/js/someController.js
+
 > 那么ng-include的src应该是 ../Tpl/partial.html;
 
 原理是,
 
 > 页面中<ng-include src="somePath"></ng-include>
+
 > 对应的是Controller中的一个变量:$scope.somePath=xxxxx
+
 > 而如果写成<ng-include src="'somePath'"></ng-include>,
 
 其实效果是这样的:
+
 > 页面:<ng-include src="a"></ng-include>
+
 > 控制器:$scope.a='somePath'
 
 所以这个变量不管写成变量还是字符串常量,都是要到Controller里去解析的,所以这个路径就是控制器相对于带引入的那个html的路径;
