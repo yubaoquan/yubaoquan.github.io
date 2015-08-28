@@ -36,15 +36,15 @@ title: 一次不成功的性能优化
 
 原理是,
 
-> 页面中<ng-include src="somePath"></ng-include>
+> 页面中&lt;ng-include src="somePath"$gt;&lt;/ng-include$gt;
 
 > 对应的是Controller中的一个变量:$scope.somePath=xxxxx
 
-> 而如果写成<ng-include src="'somePath'"></ng-include>,
+> 而如果写成&lt;ng-include src="'somePath'"$gt;&lt;/ng-include$gt;,
 
 其实效果是这样的:
 
-> 页面:<ng-include src="a"></ng-include>
+> 页面:&lt;ng-include src="a"$gt;&lt;/ng-include$gt;
 
 > 控制器:$scope.a='somePath'
 
