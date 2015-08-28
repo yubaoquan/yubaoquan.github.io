@@ -32,6 +32,7 @@ title: 一次不成功的性能优化
 > 那么ng-include的src应该是 ../Tpl/partial.html;
 
 原理是,
+
 > 页面中<ng-include src="somePath"></ng-include>
 > 对应的是Controller中的一个变量:$scope.somePath=xxxxx
 > 而如果写成<ng-include src="'somePath'"></ng-include>,
