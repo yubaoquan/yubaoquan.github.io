@@ -24,13 +24,22 @@ title: 一次不成功的性能优化
 
 这两天我突然反应过来了,那个include的路径之所以直接写相对路径引入不进来,不是不能引用静态资源,而是相对的对象不对!
 这个相对路径,并不是主页面和被引入的html的相对路径,而应该是ng-include所在的Controller与被引入的html文件的相对路径.
-比如,主页面是project/Tpl/main.html,要引入的页面是project/Tpl/partial.html,ng-include所在块的控制器是
-project/js/someController.js,那么ng-include的src应该是../Tpl/partial.html;
-原理是,页面中<ng-include src="somePath"></ng-include> 对应的是Controller中的一个变量:$scope.somePath=xxxxx
-而如果写成<ng-include src="'somePath'"></ng-include>,
+比如,
+
+> 主页面是 project/Tpl/main.html
+> 要引入的页面是 project/Tpl/partial.html
+> ng-include所在块的控制器是 project/js/someController.js
+> 那么ng-include的src应该是 ../Tpl/partial.html;
+
+原理是,
+> 页面中<ng-include src="somePath"></ng-include>
+> 对应的是Controller中的一个变量:$scope.somePath=xxxxx
+> 而如果写成<ng-include src="'somePath'"></ng-include>,
+
 其实效果是这样的:
-页面:<ng-include src="a"></ng-include>
-控制器:$scope.a='somePath'
+> 页面:<ng-include src="a"></ng-include>
+> 控制器:$scope.a='somePath'
+
 所以这个变量不管写成变量还是字符串常量,都是要到Controller里去解析的,所以这个路径就是控制器相对于带引入的那个html的路径;
 
 想明白这个问题之后,所有的路径都可以改写成直接请求静态资源的路径,就避免了请求php后台造成的开销;
@@ -42,7 +51,10 @@ project/js/someController.js,那么ng-include的src应该是../Tpl/partial.html;
 然后同事说,竞品是把一些页面模板写成angular模块,也就是变成了js文件,然后合并了之后传到前台的,
 这样,很多个html又能合并成很少的一两个js文件,这样对静态资源的请求又减少了;
 但是这么做的话,纯手工的情况下不仅工作量大,而且代码也不好维护;
-于是,我在网上找到了这个<a href="http://www.cnblogs.com/whitewolf/p/3601990.html" target="_blank">帖子</a>
+于是,我在网上找到了这个帖子:
+
+> <a href="http://www.cnblogs.com/whitewolf/p/3601990.html" target="_blank">ng-template寄宿方式</a>
+
 经过研究,又找到了一个html2js的一个插件,正好顺便把gulp环境也搭起来了;
 少许配置,跑了个任务,10多个html就合成了两个js文件;
 请求数又少了一堆;
