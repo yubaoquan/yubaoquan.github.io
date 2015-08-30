@@ -1,0 +1,74 @@
+.container {
+    background-color: #9EE86C;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate3d(-50%, 0, 0);
+    width: 650px;
+    height: 500px;
+    overflow: hidden;
+}
+
+
+
+.pipe-pair {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /*left: 50%;*/
+    width: 100px;
+
+    transition: transform 8s linear;
+}
+
+@keyframes moving {
+    from {
+        transform: translate3d(650px, 0, 0);
+
+    }
+
+    to {
+        transform: translate3d(-650px, 0, 0);
+
+    }
+}
+
+.pipe {
+    position: absolute;
+    background-color: green;
+    width: 100%;
+    left: 0;
+    background-image: url(../images/pipe_body.png);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+}
+
+.top-pipe {
+    top: 0;
+    height: 200px;
+}
+
+.bottom-pipe {
+    bottom: 0;
+    height: 150px;
+}
+
+.hammer {
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    height: 55px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.top-pipe .hammer {
+    bottom: 0;
+    background-image: url(../images/pipe_head_1.png);
+
+}
+
+.bottom-pipe .hammer {
+    top: 0;
+    background-image: url(../images/pipe_head_2.png);
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheet/common.css">
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheet/item.css"> -->
+    <meta charset="utf-8">
+    <title>fluky bird</title>
+</head>
+
+<body>
+    <aside>
+        <p>
+            山寨版fluppy bird, 目前还没做鸟
+        </p>
+        <p>
+            哪天高兴了再做
+        </p>
+    </aside>
+    <div class="container">
+    </div>
+    <script type="text/javascript" src="../common_js/sea.js"></script>
+    <script type="text/javascript">
+        seajs.config({
+            base: "./js/",
+            alias: {
+                "jquery": "jquery"
+            }
+        });
+        seajs.use(['pipe.js', 'util.js', 'main.js']);
+    </script>
+</body>
+
+</html>
