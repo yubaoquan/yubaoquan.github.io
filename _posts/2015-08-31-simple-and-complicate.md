@@ -34,17 +34,14 @@ seajs的<a href="http://seajs.org/docs/#intro" target="_blank">官网</a>上是�
 作为一个刚接触它的用户, 我觉得这有待商榷.
 比如它的<a href="https://github.com/seajs/examples/blob/master/app/hello.html" target="_blank">demo</a>中, 有这样一个配置
 
-> seajs.config({
-
->  base: "../sea-modules/",
-
->  alias: {
-
->    "jquery": "jquery/jquery/1.10.1/jquery.js"
-
->  }
-
-> });
+```js
+seajs.config({
+ base: "../sea-modules/",
+ alias: {
+   "jquery": "jquery/jquery/1.10.1/jquery.js"
+ }
+});
+```
 
 一般对前端有了解的, 都会明白, 这里的jquery文件放在了jquery/jquery/1.10.1/这个路径下,那么按照直觉, 如果我把文件移动到
 lib/下, 然后将alias改为
