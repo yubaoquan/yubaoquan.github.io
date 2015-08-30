@@ -25,7 +25,9 @@ title: 简单和复杂
 seajs的<a href="http://seajs.org/docs/#intro" target="_blank">官网</a>上是这样介绍的:
 
 > 提供简单、极致的模块化开发体验
+
 > 简单友好的模块定义规范
+
 > 自然直观的代码组织方式
 
 但是真的简单吗? 真的直观吗?
@@ -33,10 +35,15 @@ seajs的<a href="http://seajs.org/docs/#intro" target="_blank">官网</a>上是�
 比如它的<a href="https://github.com/seajs/examples/blob/master/app/hello.html" target="_blank">demo</a>中, 有这样一个配置
 
 > seajs.config({
+
 >  base: "../sea-modules/",
+
 >  alias: {
+
 >    "jquery": "jquery/jquery/1.10.1/jquery.js"
+
 >  }
+
 > });
 
 一般对前端有了解的, 都会明白, 这里的jquery文件放在了jquery/jquery/1.10.1/这个路径下,那么按照直觉, 如果我把文件移动到
@@ -51,7 +58,9 @@ lib/下, 然后将alias改为
 
 这个按照常人的思维, 应该没啥问题吧?
 答案是,有问题!
-**报错! **
+
+**报错!**
+
 **$ is undefined!**
 
 就为了这么点玩意儿, 我研究到半夜一点多.
