@@ -30,13 +30,16 @@ title: 一些我之前不知道的前端知识点
 2.`dataset`: 往dom元素上存取自定义属性/数据的方式;
 相关介绍如下:
 
-<a href="http://www.cnblogs.com/ATree/archive/2011/08/24/HTML5-Dataset.html" target="_blank">这个</a>
-<a href="http://www.zhangxinxu.com/wordpress/2010/08/翻译-你必须知道的28个html5特征、窍门和技术/" target="_blank">还有这个</a>
+<a href="http://www.cnblogs.com/ATree/archive/2011/08/24/HTML5-Dataset.html" target="_blank">这个</a><br>
+<a href="http://www.zhangxinxu.com/wordpress/2010/08/翻译-你必须知道的28个html5特征、窍门和技术/" target="_blank">还有这个</a><br>
 
 
-3.从canvas画的图像中获取图像数据: `var imgData = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);`
+3.从canvas画的图像中获取图像数据:
 
 ```js
+
+    var imgData = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);
+
     for (i=0, len=imgData.data.length; i<len; i++)
 
     imgData.data[i+0] R
@@ -44,8 +47,9 @@ title: 一些我之前不知道的前端知识点
     imgData.data[i+1] G
 
     imgData.data[i+2] B
-    
+
     imgData.data[i+3] A
+
 ```
 
 跨域的图片(canvas所在的域和图片的域不同)获取不到数据;
