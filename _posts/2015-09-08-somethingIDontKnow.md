@@ -37,11 +37,15 @@ title: 一些我之前不知道的前端知识点
 3.从canvas画的图像中获取图像数据: `var imgData = ctx.getImageData(0, 0, ctx.canvas.width, ctx.canvas.height);`
 
 ```js
-for (i=0, len=imgData.data.length; i<len; i++)
-imgData.data[i+0] R
-imgData.data[i+1] G
-imgData.data[i+2] B
-imgData.data[i+3] A
+    for (i=0, len=imgData.data.length; i<len; i++)
+
+    imgData.data[i+0] R
+
+    imgData.data[i+1] G
+
+    imgData.data[i+2] B
+    
+    imgData.data[i+3] A
 ```
 
 跨域的图片(canvas所在的域和图片的域不同)获取不到数据;
