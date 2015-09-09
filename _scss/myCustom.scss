@@ -13,12 +13,11 @@
     background-color: rgba(9, 247, 247, 0.2);
 
     font-family: Microsoft YaHei;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .day-by-day>div {
-    height: 100%;
-    overflow: auto;
+    height: 200px;
+    overflow-y: auto;
 }
 
 .day-by-day>div>div{
