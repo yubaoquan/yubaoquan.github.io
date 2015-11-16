@@ -5,7 +5,7 @@ title: 关于原型链的一些学习
 
 忘了一件事, 渲染之后不是用markdown语法, 是用的CSS, 代码全乱了;
 
-这里补上<a href="{{ site.baseurl }}blob/master/_posts/2015-11-16-prototype.md">markdown地址</a>
+这里补上<a href="https://github.com/yubaoquan/yubaoquan.github.io/blob/master/_posts/2015-11-16-prototype.md">markdown地址</a>
 
 ------
 
