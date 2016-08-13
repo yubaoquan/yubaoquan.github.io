@@ -31,9 +31,9 @@ var a = {
     x: config.middle,
     y: config.lineHeight + config.jumpHeight
 };
+NodeList.prototype.forEach = NodeList.prototype.forEach || [].forEach;
 initParam();
 animloop();
-
 document.querySelectorAll('button').forEach(function(btn) {
     btn.addEventListener('click', function() {
         if (btn.dataset.opType == 'incOrDec') {
