@@ -3,13 +3,64 @@
 <head>
     <meta charset="utf-8">
     <title>心电图</title>
+    <style>
+        canvas {
+            vertical-align: bottom;
+        }
+        .m-opPanel {
+            display: inline-block;
+            width: 300px;
+        }
+        .m-opPanel p {
+            background: #ddd;
+            margin: 0;
+            padding: 5px;
+        }
+        .m-opPanel label {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
-
-<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3; background-color: black;">
+<div class="m-opPanel">
+    <p>
+        <button data-property="middle">此刻心跳</button>
+    </p>
+    <p>
+        <label>形状</label>&nbsp;
+        <button data-property="unitShape" data-unit-shape="rect">方形</button>&nbsp;
+        <button data-property="unitShape" data-unit-shape="circle">圆形</button>&nbsp;
+        <span class="j-showStatus" data-property="unitShape"></span>
+    </p>
+    <p>
+        <label>速度</label>&nbsp;
+        <button data-op-type="incOrDec" data-property="speed" data-inc="1">+</button>&nbsp;
+        <button data-op-type="incOrDec" data-property="speed" data-inc="-1">-</button>&nbsp;
+        <span class="j-showStatus" data-property="speed"></span>
+    </p>
+    <p>
+        <label>高度</label>&nbsp;
+        <button data-op-type="incOrDec" data-property="jumpHeight" data-inc="5">+</button>&nbsp;
+        <button data-op-type="incOrDec" data-property="jumpHeight" data-inc="-5">-</button>&nbsp;
+        <span class="j-showStatus" data-property="jumpHeight"></span>
+    </p>
+    <p>
+        <label>上升宽度</label>&nbsp;
+        <button data-op-type="incOrDec" data-property="upDistance" data-inc="5">+</button>&nbsp;
+        <button data-op-type="incOrDec" data-property="upDistance" data-inc="-5">-</button>&nbsp;
+        <span class="j-showStatus" data-property="upDistance"></span>
+    </p>
+    <p>
+        <label>下降宽度</label>&nbsp;
+        <button data-op-type="incOrDec" data-property="downDistance" data-inc="5">+</button>&nbsp;
+        <button data-op-type="incOrDec" data-property="downDistance" data-inc="-5">-</button>&nbsp;
+        <span class="j-showStatus" data-property="downDistance"></span>
+    </p>
+</div>
+<canvas id="myCanvas" width="500" height="350" style="border:1px solid #d3d3d3; background-color: black;">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
-<button id="btn">心跳</button>
 
 <script src="script.js"></script>
 
