@@ -19,7 +19,7 @@
         return btoa(encodeURIComponent(text));
     }
 
-    function convert2Ascii(str) {
+    function convert2Ascii(str = 'xxx') {
         return btoa(encodeURIComponent(str));
     }
 
@@ -49,6 +49,10 @@
     btnEnc.addEventListener('click', () => {
         let text = textarea.value;
         let key = input.value;
+        if (!key) {
+            alert('请输入密码');
+            return;
+        }
         let result = encrypt(text, (key));
 
         textarea.value = result;
@@ -58,6 +62,10 @@
     btnDec.addEventListener('click', () => {
         let text = textarea.value;
         let key = input.value;
+        if (!key) {
+            alert('请输入密码');
+            return;
+        }
         let result = decrypt(text, (key));
 
         textarea.value = result;
