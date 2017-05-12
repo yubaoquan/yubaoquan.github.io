@@ -6,6 +6,10 @@
     const seed = 2;
 
     function encrypt(text = '', key = '') {
+        if (!String.fromCharCode) {
+            alert('no fromcharcode');
+            return '';
+        }
         text = convert2Ascii(text);
         key = convert2Ascii(key);
         while (key.length < text.length) {
@@ -58,6 +62,10 @@
         textarea.value = result;
 
     });
+
+    function onEncClick() {
+
+    }
 
     btnDec.addEventListener('click', () => {
         let text = textarea.value;
