@@ -14,12 +14,33 @@
             <section>
                 <input type="text" placeholder="秘钥">
             </section>
+            <section class="f-tal" id="encrypt-types">
+                <p>选择密文样式:</p>
+                <label for="type-0">
+                    <input id="type-0" type="radio" name="type" value="0" checked><span>Emoji</span>
+                </label>
+                <br>
+                <label for="type-1">
+                    <input id="type-1" type="radio" name="type" value="1"><span>化学元素</span>
+                </label>
+                <br>
+                <label for="type-2">
+                    <input id="type-2" type="radio" name="type" value="2"><span>火星文</span>
+                </label>
+                <br>
+                <label for="type-3">
+                    <input id="type-3" type="radio" name="type" value="3"><span>符号表情</span>
+                </label>
+                <br>
+                <label for="type-4">
+                    <input id="type-4" type="radio" name="type" value="4" disabled><span>fuck</span>
+                </label>
+            </section>
             <section>
                 <button id="btn-enc">加密</button>
                 <button id="btn-dec">解密</button>
             </section>
         </article>
-        <span id="result"></span>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
