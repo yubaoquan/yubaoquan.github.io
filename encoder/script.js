@@ -89,6 +89,9 @@
     }
 
     function decrypt(text = '', key = '') {
+        if (!text) {
+            return text;
+        }
         try {
             let temp = [];
             temp = devide(text).map(char => decMap[char]).join('');
@@ -158,7 +161,7 @@
         let text = textarea.value;
         let key = input.value;
         if (!key) {
-            alert('请输入密码');
+            alert('Please input the key.');
             return;
         }
         let result = fn(text, key);

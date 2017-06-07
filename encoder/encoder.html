@@ -9,27 +9,27 @@
     <body>
         <article>
             <section>
-                <textarea name="name" rows="18" cols="80" placeholder="明文/密文"></textarea>
+                <textarea name="name" rows="18" cols="80" placeholder="plain text/ciphertext"></textarea>
             </section>
             <section>
-                <input type="text" placeholder="秘钥">
+                <input type="text" placeholder="key">
             </section>
             <section class="f-tal" id="encrypt-types">
-                <p>选择密文样式:</p>
+                <p>Select ciphertext style:</p>
                 <label for="type-0">
                     <input id="type-0" type="radio" name="type" value="0" checked><span>Emoji</span>
                 </label>
                 <br>
                 <label for="type-1">
-                    <input id="type-1" type="radio" name="type" value="1"><span>化学元素</span>
+                    <input id="type-1" type="radio" name="type" value="1"><span>chemical element name in Chinese</span>
                 </label>
                 <br>
                 <label for="type-2">
-                    <input id="type-2" type="radio" name="type" value="2"><span>火星文</span>
+                    <input id="type-2" type="radio" name="type" value="2"><span>Mars characters</span>
                 </label>
                 <br>
                 <label for="type-3">
-                    <input id="type-3" type="radio" name="type" value="3"><span>符号表情</span>
+                    <input id="type-3" type="radio" name="type" value="3"><span>Punctuational emotions</span>
                 </label>
                 <br>
                 <label for="type-4">
@@ -37,8 +37,8 @@
                 </label>
             </section>
             <section>
-                <button id="btn-enc">加密</button>
-                <button id="btn-dec">解密</button>
+                <button id="btn-enc">encrypt</button>
+                <button id="btn-dec">decrypt</button>
             </section>
         </article>
         <script type="text/javascript" src="script.js"></script>
