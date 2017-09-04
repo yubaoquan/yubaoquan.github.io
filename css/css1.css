@@ -1,8 +1,9 @@
 .hello {
 	border: 1px solid #ccc;
-	color :blue;	
+	color :blue;
 
 }
+
 
 body {
 	background-image: url(../images/bg2.jpg);
@@ -70,7 +71,7 @@ body {
 	height: 60px;
 	text-align:center;
 	font-weight:bold;
-	
+
 }
 
 .headerPadding{
